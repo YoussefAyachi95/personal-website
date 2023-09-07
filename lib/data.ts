@@ -65,16 +65,9 @@ export const projectsData = [
   {
     title: "Iffy",
     description:
-      "Iffy is a simple gif search application made with React. It was the final project of React module. The user can view a gif list and filter the gif list by rating, click on gif to see it in detail, move through different routes and save the last gif search in the local storage.",
+      "Iffy is a React-based GIF search app that enables users to filter, view, and save GIFs, explore different routes, and store their last search in local storage.",
     tags: ["React", "SCSS", "Wouter"],
     imageUrl: IffyImg,
-  },
-  {
-    title: "Snappy",
-    description:
-      "A functional Snapchat Clone Web Application where the user can sign in, take a picture and upload it to a database. The picture can be seen for 10 seconds and then it's no longer available.",
-    tags: ["React", "Redux", "Firebase"],
-    imageUrl: SnappyImg,
   },
   {
     title: "Dassana Project Administrator",
@@ -84,9 +77,16 @@ export const projectsData = [
     imageUrl: dassanaImg,
   },
   {
+    title: "Snappy",
+    description:
+      "A functional Snapchat Clone Web App. Users can sign in, upload pictures to a database, and view them for 10 seconds before they disappear",
+    tags: ["React", "Redux", "Firebase"],
+    imageUrl: SnappyImg,
+  },
+  {
     title: "Text Based Dungeon Crawler",
     description:
-      "A group project where the objective was to build a mini game using plain Javascript in the terminal. The game allows the player to go through different rooms in where there are different enemies randomly generated that the player needs to defeat.",
+      "A group project to create a text-based JavaScript mini game in the terminal. Players navigate through rooms, facing randomly generated enemies to defeat.",
     tags: ["Javascript", "Node.js"],
     imageUrl: dungeonImg,
   },
