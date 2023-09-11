@@ -1,6 +1,4 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import IffyImg from "@/public/Iffy.jpg";
 import SnappyImg from "@/public/Snappy.jpg";
@@ -48,15 +46,15 @@ export const experiencesData = [
     location: "Coursera - Online",
     description:
       "2 Months online course where I learnt to manipulate data with Javascript and JQuery",
-    icon: React.createElement(CgWorkAlt),
+    icon: React.createElement(LuGraduationCap),
     date: "01/2022 - 03/2022",
   },
   {
     title: "Intership as Full-Stack Web Developer",
     location: "DCI, Berlin - Remote",
     description:
-      "One-year full-time intensive training program for web developer, including MERN technologies. Responsive frontend created, CRUD operations performed, server built, and connected to a database.",
-    icon: React.createElement(FaReact),
+      "One-year full-time intensive training program for web developers using MERN technologies. Created responsive design applications, performed CRUD operations and built servers connected to databases.",
+    icon: React.createElement(LuGraduationCap),
     date: "06/2022 - 08/2023",
   },
 ] as const;
