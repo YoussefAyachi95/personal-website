@@ -3,6 +3,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import useSectionInView from '@/hooks/useSectionInView'
+import { sendEmail } from '@/actions/sendEmail'
 import SectionHeading from './SectionHeading'
 import { FaPaperPlane } from 'react-icons/fa'
 
@@ -30,9 +31,11 @@ export default function Contact() {
             <p className="text-gray-700 -mt-6">
                 Contact me directly at <a className="underline" href="mailto:youssef-ayachi@web.de">youssef-ayachi@web.de</a> or through this form.
             </p>
-            <form className="mt-10 flex flex-col">
-                <input type="email" placeholder="Your email" className="h-14 px-4 rounded-lg borderBlack" />
-                <textarea className="h-52 my-3 rounded-lg borderBlack p-4" placeholder="Your message" />
+            <form className="mt-10 flex flex-col" action={async (formData) => {
+                    await sendEmail(formData)
+                }}>
+                <input name="senderEmail" type="email" required maxLength={500} placeholder="Your email" className="h-14 px-4 rounded-lg borderBlack" />
+                <textarea name="message" className="h-52 my-3 rounded-lg borderBlack p-4" required maxLength={5000} placeholder="Your message" />
                 <button 
                 type="submit" 
                 className="group flex items-center justify-center gap-2 h-[3rem] w-[8rem] bg-gray-900 
