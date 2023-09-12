@@ -71,11 +71,12 @@ export default function Intro() {
                     Contact me <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
                 </Link>
 
-                <Link href="/resume" 
+                <a href="/CV.pdf" 
+                download
                 className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full
                 outline-none focus:scale-110 hover:scale-110 active:scale-105 transition borderBlack">
                     Download CV <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
-                </Link>
+                </a>
 
                 <a 
                 href="https://www.linkedin.com/in/youssef-ayachi-0a097b229/" 
