@@ -48,7 +48,7 @@ export default function Intro() {
             animate={{ opacity: 1, y: 0 }}
             >
                 <span>Hi there, </span>
-                <span className="font-bold">I&apos;m <span className="hover:underline">Youssef,</span>Frontend Developer. </span>
+                <span className="font-bold">I&apos;m <span className="hover:underline">Youssef,</span> Frontend Developer. </span>
                 <span>And I want to help make the internet a more creative, accessible, and better place.</span>
             </motion.h1>
 
