@@ -20,13 +20,13 @@ export default function LanguageSwitch() {
                 >
                     {language === 'en' ? 
                     <Image 
-                      src="https://www.svgrepo.com/show/248821/united-kingdom-uk.svg"
+                      src="/united-kingdom-uk.svg"
                       alt="English"
                       width="30"
                       height="30" 
                     /> : 
                     <Image 
-                      src="https://www.svgrepo.com/show/405490/flag-for-flag-germany.svg"
+                      src="/flag-for-flag-germany.svg"
                       alt="English"
                       width="30"
                       height="30"
