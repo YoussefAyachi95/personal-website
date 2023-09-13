@@ -4,12 +4,14 @@ import React, { useRef } from 'react'
 import { motion } from 'framer-motion'
 import useSectionInView from '@/hooks/useSectionInView'
 import { sendEmail } from '@/actions/sendEmail'
+import { useLanguage } from '@/hooks/useLanguage'
 import toast from "react-hot-toast";
 import SectionHeading from './SectionHeading'
 import SubmitButton from './SubmitButton'
 
 export default function Contact() {
     const { ref } = useSectionInView("Contact")
+    const { language } = useLanguage()
     const senderEmailRef = useRef<HTMLInputElement | null>(null)
     const messageRef = useRef<HTMLTextAreaElement | null>(null)
 
@@ -31,10 +33,23 @@ export default function Contact() {
             once: true,
         }}
         >
-            <SectionHeading>Contact Me</SectionHeading>
-            <p className="text-gray-700 -mt-6 dark:text-white/80">
-                Contact me directly at <a className="underline" href="mailto:youssef-ayachi@web.de">youssef-ayachi@web.de</a> or through this form.
-            </p>
+            {
+                language === "de" ? (
+                    <>
+                        <SectionHeading>Kontaktieren Sie mich</SectionHeading>
+                        <p className="text-gray-700 -mt-6 dark:text-white/80">
+                            Kontaktieren Sie mich direkt unter <a className="underline" href="mailto:youssef-ayachi@web.de">youssef-ayachi@web.de</a> oder über dieses Formular.
+                        </p>
+                    </>
+                ) : (
+                    <>
+                        <SectionHeading>Contact Me</SectionHeading>
+                        <p className="text-gray-700 -mt-6 dark:text-white/80">
+                            Contact me directly at <a className="underline" href="mailto:youssef-ayachi@web.de">youssef-ayachi@web.de</a> or through this form.
+                        </p>
+                    </>
+                )
+            }
             <form className="mt-10 flex flex-col dark:text-black" action={async (formData) => {
                     const {data, error} = await sendEmail(formData)
 
@@ -53,7 +68,7 @@ export default function Contact() {
                     required 
                     maxLength={500} 
                     ref={senderEmailRef}
-                    placeholder="Your email"
+                    placeholder={language === "de" ? "Ihre Email" : "Your Email"}
                     className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none" />
                 <textarea 
                     name="message" 
@@ -61,7 +76,7 @@ export default function Contact() {
                     required 
                     maxLength={5000} 
                     ref={messageRef}
-                    placeholder="Your message" />
+                    placeholder={language === "de" ? "Ihre Nachricht" : "Your message"}/>
                 <SubmitButton />
             </form>
         </motion.section>

@@ -1,9 +1,11 @@
 import React from 'react'
+import { useLanguage } from '@/hooks/useLanguage'
 import { experimental_useFormStatus as useFormStatus } from 'react-dom'
 import { FaPaperPlane } from 'react-icons/fa'
 
 export default function SubmitButton() {
     const { pending } = useFormStatus()
+    const { language } = useLanguage()
     return (
         <button 
                     type="submit" 
@@ -13,7 +15,12 @@ export default function SubmitButton() {
                     disabled={pending}>
                     { pending 
                         ? ( <div className="h-5 w-5 animate-spin rounded-full border-b-2 border-white"></div>) 
-                        : ( <> Submit <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" /> </>)
+                        : ( <> 
+                        {
+                            language === "de" ? "Absenden" : "Submit"
+                        } <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" /> 
+                        </>
+                        )
                     }
         </button>
     )

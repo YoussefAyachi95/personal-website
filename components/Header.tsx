@@ -2,6 +2,7 @@
 
 import React from 'react'
 import useActiveSectionContext from '@/hooks/useActiveSectionContext'
+import { useLanguage } from '@/hooks/useLanguage'
 import { links } from '@/lib/data'
 import Link from 'next/link'
 import { motion } from "framer-motion"
@@ -9,6 +10,7 @@ import clsx from "clsx"
 
 export default function Header() {
     const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext()
+    const { language } = useLanguage()
 
   return (
     <header className="z-[999] relative">

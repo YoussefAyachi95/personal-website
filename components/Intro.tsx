@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import useSectionInView from '@/hooks/useSectionInView'
 import useActiveSectionContext from '@/hooks/useActiveSectionContext'
+import { useLanguage } from '@/hooks/useLanguage'
 import { BsArrowRight, BsLinkedin, BsGithub } from'react-icons/bs'
 import { HiDownload } from'react-icons/hi'
 
@@ -14,6 +15,8 @@ import meImg from '@/public/me.jpg'
 export default function Intro() {
     const { ref } = useSectionInView("Home", 0.5)
     const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext()
+    const { language } = useLanguage()
+
 
     return (
         <section ref={ref} id="home" className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
@@ -47,9 +50,19 @@ export default function Intro() {
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             >
-                <span>Hi there, </span>
-                <span className="font-bold">I&apos;m <span className="hover:underline">Youssef,</span> Frontend Developer. </span>
-                <span>And I want to help make the internet a more creative, accessible, and better place.</span>
+                {language === 'de' ? (
+                    <>
+                        <span>Hallo, </span>
+                        <span className="font-bold">Ich bin <span className="hover:underline">Youssef,</span> Frontend-Entwickler. </span>
+                        <span>Und ich möchte dazu beitragen, das Internet zu einem kreativeren, zugänglicheren und besseren Ort zu machen.</span>
+                    </>
+                ) : (
+                    <>
+                        <span>Hi there, </span>
+                        <span className="font-bold">I&apos;m <span className="hover:underline">Youssef,</span> Frontend Developer. </span>
+                        <span>And I want to help make the internet a more creative, accessible, and better place.</span>
+                    </>
+                )}
             </motion.h1>
 
             <motion.div
@@ -60,39 +73,64 @@ export default function Intro() {
                 delay: 0.1,
             }}
             >
-                <Link href="#contact" 
-                className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full 
-                outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
-                onClick={() => {
-                    setActiveSection("Contact");
-                    setTimeOfLastClick(Date.now());
-                }}
-                >
-                    Contact me <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
-                </Link>
+                {language === 'de' ? (
+                    <>
+                        <Link
+                        href="#contact"
+                        className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full
+                        outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+                        onClick={() => {
+                            setActiveSection('Contact');
+                            setTimeOfLastClick(Date.now());
+                        }}> Kontaktiere mich <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
+                        </Link>
 
-                <a href="/CV.pdf" 
-                download
-                className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full
-                outline-none focus:scale-110 hover:scale-110 active:scale-105 transition borderBlack dark:bg-white/10">
-                    Download CV <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
-                </a>
+                        <a
+                        href="/CV.pdf"
+                        download
+                        className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full
+                        outline-none focus:scale-110 hover:scale-110 active:scale-105 transition borderBlack dark:bg-white/10"> 
+                        Lebenslauf herunterladen <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
+                        </a>
+                    </>
+                    ) : (
+                    <>
+                        <Link
+                        href="#contact"
+                        className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full
+                        outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+                        onClick={() => {
+                            setActiveSection('Contact');
+                            setTimeOfLastClick(Date.now());
+                        }}
+                        >
+                        Contact me <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
+                        </Link>
 
-                <a 
-                href="https://www.linkedin.com/in/youssef-ayachi-0a097b229/" 
-                target="_blank" 
-                className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15]
-                hover:text-gray-950 active:scale-105 transition borderBlack dark:bg-white/10 dark:text-white/60">
-                    <BsLinkedin />
-                </a>
+                        <a
+                        href="/CV.pdf"
+                        download
+                        className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full
+                        outline-none focus:scale-110 hover:scale-110 active:scale-105 transition 
+                        borderBlack dark:bg-white/10"> Download CV <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
+                        </a>
+                    </>
+                    )}
+                    <a 
+                    href="https://www.linkedin.com/in/youssef-ayachi-0a097b229/" 
+                    target="_blank" 
+                    className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15]
+                    hover:text-gray-950 active:scale-105 transition borderBlack dark:bg-white/10 dark:text-white/60">
+                        <BsLinkedin />
+                    </a>
 
-                <a 
-                href="https://github.com/YoussefAyachi95" 
-                target="_blank" 
-                className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] 
-                hover:text-gray-950 active:scale-105 transition borderBlack dark:bg-white/10 dark:text-white/60">
-                    <BsGithub />
-                </a>
+                    <a 
+                    href="https://github.com/YoussefAyachi95" 
+                    target="_blank" 
+                    className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] 
+                    hover:text-gray-950 active:scale-105 transition borderBlack dark:bg-white/10 dark:text-white/60">
+                        <BsGithub />
+                    </a>
             </motion.div>
         </section>
     )
