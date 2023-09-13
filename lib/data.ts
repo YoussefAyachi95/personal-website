@@ -75,6 +75,8 @@ export const projectsData = [
       "Iffy is a React-based GIF search app that enables users to filter, view, and save GIFs, explore different routes, and store their last search in local storage.",
     desc_de: "Iffy ist eine React-basierte GIF-Such-App, die es Benutzern ermöglicht, GIFs zu filtern, anzusehen, zu speichern, und ihre Suche zu speichern.", 
     tags: ["React", "SCSS", "Wouter"],
+    gitUrl: "https://github.com/YoussefAyachi95/React-Final-Project",
+    url: "https://iffy.vercel.app/",
     imageUrl: IffyImg,
   },
   {
@@ -82,6 +84,8 @@ export const projectsData = [
     description:
       "A group application project made with React and Firebase. This project allows you to create a user and manage your projects.",
     desc_de: "Ein Gruppenanwendungsprojekt, das mit React und Firebase erstellt wurde. Mit diesem Projekt können Sie Benutzer erstellen und Ihre Projekte verwalten.", 
+    gitUrl: "https://github.com/YoussefAyachi95/dassana-project-administrator",
+    url: "none",
     tags: ["React", "Firebase"],
     imageUrl: dassanaImg,
   },
@@ -90,6 +94,8 @@ export const projectsData = [
     description:
       "A functional Snapchat Clone Web App. Users can sign in, upload pictures to a database, and view them for 10 seconds before they disappear",
     desc_de: "Eine funktionale Snapchat-Klon-Web-App. Benutzer können sich anmelden, Bilder in eine Datenbank hochladen und sie 10 Sekunden lang anzeigen, bevor sie verschwinden.",
+    gitUrl: "https://github.com/YoussefAyachi95/Snappy",
+    url: "https://snapchat-ab554.firebaseapp.com/",
     tags: ["React", "Redux", "Firebase"],
     imageUrl: SnappyImg,
   },
@@ -98,6 +104,8 @@ export const projectsData = [
     description:
       "A group project to create a text-based JavaScript mini game in the terminal. Players navigate through rooms, facing randomly generated enemies to defeat.",
     desc_de: "Ein Gruppenprojekt zur Erstellung eines textbasierten JavaScript-Minispiel im Terminal. Spieler navigieren durch Räume.",
+    gitUrl: "https://github.com/YoussefAyachi95/Text-Based-Dungeon-Crawler",
+    url: "none",
     tags: ["Javascript", "Node.js"],
     imageUrl: dungeonImg,
   },
