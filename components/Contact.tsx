@@ -12,8 +12,8 @@ import SubmitButton from './SubmitButton'
 export default function Contact() {
     const { ref } = useSectionInView("Contact")
     const { language } = useLanguage()
-    const senderEmailRef = useRef<HTMLInputElement | null>(null)
-    const messageRef = useRef<HTMLTextAreaElement | null>(null)
+    const senderEmailRef = useRef<HTMLInputElement>(null)
+    const messageRef = useRef<HTMLTextAreaElement>(null)
 
     return (
         <motion.section
@@ -51,6 +51,14 @@ export default function Contact() {
                 )
             }
             <form className="mt-10 flex flex-col dark:text-black" action={async (formData) => {
+                    const senderEmail = senderEmailRef.current?.value;
+                    const message = messageRef.current?.value;
+                
+                    if (!senderEmail || !message) {
+                        console.error("senderEmailRef or messageRef is null");
+                        return;
+                    }
+
                     const {data, error} = await sendEmail(formData)
 
                     if (error) {
@@ -59,6 +67,7 @@ export default function Contact() {
                     }
 
                     toast.success("Email has been sent!")
+
                     senderEmailRef.current.value = '';
                     messageRef.current.value = '';
                 }}>
