@@ -4,6 +4,7 @@ import IffyImg from "@/public/Iffy.jpg";
 import SnappyImg from "@/public/Snappy.jpg";
 import dassanaImg from "@/public/dassana.png";
 import dungeonImg from "@/public/dungeon.png";
+import yourCharaImg from "@/public/yourchara.jpg";
 
 export const links = [
   {
@@ -70,6 +71,15 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    title: "YourChara AI",
+    description:
+      "YourChara AI is a versatile platform for creating custom chatbots with unique personalities and conversational styles.",
+    desc_de: "YourChara AI ist eine vielseitige Plattform zur Erstellung individueller Chatbots mit einzigartigen Persönlichkeiten und Gesprächsstilen.", 
+    tags: ["Next.js", "Typescript", "Prisma", "PostgreSQL", "Tailwind CSS"],
+    gitUrl: "https://github.com/YoussefAyachi95/character-ai-clone",
+    imageUrl: yourCharaImg,
+  },
+  {
     title: "Iffy",
     description:
       "Iffy is a React-based GIF search app that enables users to filter, view, and save GIFs, explore different routes, and store their last search in local storage.",
@@ -79,15 +89,6 @@ export const projectsData = [
     imageUrl: IffyImg,
   },
   {
-    title: "Dassana Project Administrator",
-    description:
-      "A group application project made with React and Firebase. This project allows you to create a user and manage your projects.",
-    desc_de: "Ein Gruppenanwendungsprojekt, das mit React und Firebase erstellt wurde. Mit diesem Projekt können Sie Benutzer erstellen und Ihre Projekte verwalten.", 
-    gitUrl: "https://github.com/YoussefAyachi95/dassana-project-administrator",
-    tags: ["React", "Firebase"],
-    imageUrl: dassanaImg,
-  },
-  {
     title: "Snappy",
     description:
       "A functional Snapchat Clone Web App. Users can sign in, upload pictures to a database, and view them for 10 seconds before they disappear",
@@ -95,6 +96,15 @@ export const projectsData = [
     gitUrl: "https://github.com/YoussefAyachi95/Snappy",
     tags: ["React", "Redux", "Firebase"],
     imageUrl: SnappyImg,
+  },
+  {
+    title: "Dassana Project Administrator",
+    description:
+      "A group application project made with React and Firebase. This project allows you to create a user and manage your projects.",
+    desc_de: "Ein Gruppenanwendungsprojekt, das mit React und Firebase erstellt wurde. Mit diesem Projekt können Sie Benutzer erstellen und Ihre Projekte verwalten.", 
+    gitUrl: "https://github.com/YoussefAyachi95/dassana-project-administrator",
+    tags: ["React", "Firebase"],
+    imageUrl: dassanaImg,
   },
   {
     title: "Text Based Dungeon Crawler",
