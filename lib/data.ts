@@ -5,6 +5,7 @@ import SnappyImg from "@/public/Snappy.jpg";
 import dassanaImg from "@/public/dassana.png";
 import dungeonImg from "@/public/dungeon.png";
 import yourCharaImg from "@/public/yourchara.jpg";
+import teachik from "@/public/teachik.jpg";
 
 export const links = [
   {
@@ -71,6 +72,15 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    title: "Teachik",
+    description:
+      "Teachik is An online learning platform where instructors can create and monetize courses while learners can discover, enroll in, and access a wide range of educational content.",
+    desc_de: "Eine Online-Lernplattform, auf der Lehrer Kurse erstellen und verkaufen können, während Lernende Kurse entdecken, sich einschreiben und auf eine Vielzahl von Bildungsinhalten zugreifen können.", 
+    tags: ["Next.js", "Typescript", "Prisma", "PostgreSQL", "Tailwind CSS"],
+    gitUrl: "https://github.com/YoussefAyachi95/teachik",
+    imageUrl: teachik,
+  },
+  {
     title: "YourChara AI",
     description:
       "YourChara AI is a versatile platform for creating custom chatbots with unique personalities and conversational styles.",
@@ -89,15 +99,6 @@ export const projectsData = [
     imageUrl: IffyImg,
   },
   {
-    title: "Snappy",
-    description:
-      "A functional Snapchat Clone Web App. Users can sign in, upload pictures to a database, and view them for 10 seconds before they disappear",
-    desc_de: "Eine funktionale Snapchat-Klon-Web-App. Benutzer können sich anmelden, Bilder in eine Datenbank hochladen und sie 10 Sekunden lang anzeigen, bevor sie verschwinden.",
-    gitUrl: "https://github.com/YoussefAyachi95/Snappy",
-    tags: ["React", "Redux", "Firebase"],
-    imageUrl: SnappyImg,
-  },
-  {
     title: "Dassana Project Administrator",
     description:
       "A group application project made with React and Firebase. This project allows you to create a user and manage your projects.",
@@ -105,6 +106,15 @@ export const projectsData = [
     gitUrl: "https://github.com/YoussefAyachi95/dassana-project-administrator",
     tags: ["React", "Firebase"],
     imageUrl: dassanaImg,
+  },
+  {
+    title: "Snappy",
+    description:
+      "A functional Snapchat Clone Web App. Users can sign in, upload pictures to a database, and view them for 10 seconds before they disappear",
+    desc_de: "Eine funktionale Snapchat-Klon-Web-App. Benutzer können sich anmelden, Bilder in eine Datenbank hochladen und sie 10 Sekunden lang anzeigen, bevor sie verschwinden.",
+    gitUrl: "https://github.com/YoussefAyachi95/Snappy",
+    tags: ["React", "Redux", "Firebase"],
+    imageUrl: SnappyImg,
   },
   {
     title: "Text Based Dungeon Crawler",
