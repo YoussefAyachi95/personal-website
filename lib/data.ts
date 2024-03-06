@@ -68,14 +68,34 @@ export const experiencesData = [
     icon: React.createElement(LuGraduationCap),
     date: "06/2022 - 08/2023",
   },
+  {
+    title: "Full Stack Web Developer (Self-Employed)",
+    title_de: "Full Stack Web Developer (Selbstständig)",
+    location: "Remote",
+    description:
+      "Expanding my knowledge and portfolio in the field of web and software development. Working in the frontend with new technologies such as TypeScript, Next.js, React Native, and Expo. Utilizing backend tools such as Prisma, Supabase, and PostgreSQL",
+    description_de:
+      "Ausbau meiner Kenntnisse und meines Portfolios im Bereich der Web und Softwareentwicklung. Arbeit im Frontend mit neuen Technologien wie TypeScript, Next.js, React Native und Expo. Einsatz von Backend-Tools wie Prisma, Supabase und PostgreSQL",
+    icon: React.createElement(LuGraduationCap),
+    date: "09/2023 - Today",
+  },
 ] as const;
 
 export const projectsData = [
+  /*{
+    title: "Wawa",
+    description:
+      "React Native mobile application designed to provide users with a convenient way to search for baby shops nearby",
+    desc_de: "Ein Gruppenanwendungsprojekt, das mit React und Firebase erstellt wurde. Mit diesem Projekt können Sie Benutzer erstellen und Ihre Projekte verwalten.", 
+    gitUrl: "https://github.com/YoussefAyachi95/wawa-mobile-app",
+    tags: ["React-Native", "Expo", "Typescript", "Supabase", "Prisma", "PostgreSQL"],
+    imageUrl: dassanaImg,
+  }, */
   {
     title: "Teachik",
     description:
-      "Teachik is An online learning platform where instructors can create and monetize courses while learners can discover, enroll in, and access a wide range of educational content.",
-    desc_de: "Eine Online-Lernplattform, auf der Lehrer Kurse erstellen und verkaufen können, während Lernende Kurse entdecken, sich einschreiben und auf eine Vielzahl von Bildungsinhalten zugreifen können.", 
+      "Teachik is an online learning platform where instructors can create and monetize courses while learners enroll in and access a wide range of educational content.",
+    desc_de: "Eine Online-Lernplattform, auf der Lehrer Kurse erstellen und verkaufen können, während Lernende sich einschreiben und auf eine Vielzahl von Bildungsinhalten zugreifen können.", 
     tags: ["Next.js", "Typescript", "Prisma", "PostgreSQL", "Tailwind CSS"],
     gitUrl: "https://github.com/YoussefAyachi95/teachik",
     imageUrl: teachik,
@@ -83,8 +103,8 @@ export const projectsData = [
   {
     title: "YourChara AI",
     description:
-      "YourChara AI is a versatile platform for creating custom chatbots with unique personalities and conversational styles.",
-    desc_de: "YourChara AI ist eine vielseitige Plattform zur Erstellung individueller Chatbots mit einzigartigen Persönlichkeiten und Gesprächsstilen.", 
+      "Versatile platform for creating custom chatbots with unique personalities and conversational styles.",
+    desc_de: "Vielseitige Plattform zur Erstellung individueller Chatbots mit einzigartigen Persönlichkeiten und Gesprächsstilen.", 
     tags: ["Next.js", "Typescript", "Prisma", "PostgreSQL", "Tailwind CSS"],
     gitUrl: "https://github.com/YoussefAyachi95/character-ai-clone",
     imageUrl: yourCharaImg,
@@ -141,10 +161,12 @@ export const skillsData = [
   "SCSS/SASS",
   "Prisma",
   "MongoDB",
-  "Redux",
+  "Zustand",
   "Express",
   "PostgreSQL",
   "JQuery",
   "Figma",
   "Photoshop",
+  "Supabase",
+  "Firebase",
 ] as const;
