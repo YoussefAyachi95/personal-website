@@ -52,15 +52,15 @@ export default function Intro() {
             >
                 {language === 'de' ? (
                     <>
-                        <span>Hallo, </span>
-                        <span className="font-bold">Ich bin <span className="hover:underline">Youssef,</span> Frontend-Entwickler. </span>
-                        <span>Und ich möchte dazu beitragen, das Internet zu einem kreativeren, zugänglicheren und besseren Ort zu machen.</span>
+                        <span>Hallo! </span>
+                        <span>Ich bin <span className="hover:cursor-pointer font-bold">Youssef,</span> Frontend Developer, </span>
+                        <span>und ich möchte dazu beitragen, das Internet zu einem kreativeren, zugänglicheren und besseren Ort zu machen.</span>
                     </>
                 ) : (
                     <>
-                        <span>Hi there, </span>
-                        <span className="font-bold">I&apos;m <span className="hover:underline">Youssef,</span> Frontend Developer. </span>
-                        <span>And I want to help make the internet a more creative, accessible, and better place.</span>
+                        <span>Hi there! </span>
+                        <span>I&apos;m <span className="hover:cursor-pointer font-bold">Youssef,</span> Frontend Developer, </span>
+                        <span>and I want to help make the internet a more creative, accessible, and better place.</span>
                     </>
                 )}
             </motion.h1>
