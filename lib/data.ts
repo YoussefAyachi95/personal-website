@@ -6,6 +6,7 @@ import dassanaImg from "@/public/dassana.png";
 import dungeonImg from "@/public/dungeon.png";
 import yourCharaImg from "@/public/yourchara.jpg";
 import teachik from "@/public/teachik.jpg";
+import wawaImg from "@/public/wawa.png";
 
 export const links = [
   {
@@ -82,21 +83,21 @@ export const experiencesData = [
 ] as const;
 
 export const projectsData = [
-  /*{
+  {
     title: "Wawa",
     description:
       "React Native mobile application designed to provide users with a convenient way to search for baby shops nearby",
     desc_de: "Ein Gruppenanwendungsprojekt, das mit React und Firebase erstellt wurde. Mit diesem Projekt können Sie Benutzer erstellen und Ihre Projekte verwalten.", 
     gitUrl: "https://github.com/YoussefAyachi95/wawa-mobile-app",
     tags: ["React-Native", "Expo", "Typescript", "Supabase", "Prisma", "PostgreSQL"],
-    imageUrl: dassanaImg,
-  }, */
+    imageUrl: wawaImg,
+  }, 
   {
     title: "Teachik",
     description:
       "Teachik is an online learning platform where instructors can create and monetize courses while learners enroll in and access a wide range of educational content.",
     desc_de: "Eine Online-Lernplattform, auf der Lehrer Kurse erstellen und verkaufen können, während Lernende sich einschreiben und auf eine Vielzahl von Bildungsinhalten zugreifen können.", 
-    tags: ["Next.js", "Typescript", "Prisma", "PostgreSQL", "Tailwind CSS"],
+    tags: ["Next.js", "Typescript", "Prisma", "Tailwind CSS"],
     gitUrl: "https://github.com/YoussefAyachi95/teachik",
     imageUrl: teachik,
   },
@@ -167,6 +168,8 @@ export const skillsData = [
   "JQuery",
   "Figma",
   "Photoshop",
+  "React-Native",
+  "Expo",
   "Supabase",
   "Firebase",
 ] as const;
